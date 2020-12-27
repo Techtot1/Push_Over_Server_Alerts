@@ -9,8 +9,8 @@ SendTime = datetime.datetime.now()
 with open(os.getcwd()+"/Config.json","r") as ConfigFile:
     Config = json.load(ConfigFile)
 
-Config["message"] =("The MCMA and/or Eternalcraft minecraft server has stopped at: {}".format(SendTime.strftime("%Y-%m-%d  %H:%M:%S"))),
-Config["title"] = "MCMA/Eternalcraft CRASH/ERROR!"
+Config["message"] ="",
+Config["title"] = ""
 
 with open(os.getcwd()+"/Config.json","w") as ConfigFile:   
     json.dump(Config,ConfigFile)
