@@ -9,7 +9,7 @@ SendTime = datetime.datetime.now()
 with open(os.getcwd()+"/Config.json","r") as ConfigFile:
     Config = json.load(ConfigFile)
 
-Config["message"] ="",
+Config["message"] =("{}".format(SendTime.strftime("%Y-%m-%d  %H:%M:%S"))),
 Config["title"] = ""
 
 with open(os.getcwd()+"/Config.json","w") as ConfigFile:   
